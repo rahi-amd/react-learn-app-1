@@ -5,6 +5,18 @@ function StorySelector(){
     return (
         <div className="story-selector">
             <div className="story-card">
+                <div className="page-tabs">
+            <div className="page-tab"></div>
+            <div className="page-tab"></div>
+            <div className="page-tab"></div>
+            <div className="page-tab"></div>
+            <div className="page-tab"></div>
+            <div className="page-tab"></div>
+            <div className="page-tab"></div>
+            <div className="page-tab"></div>
+            <div className="page-tab"></div>
+            <div className="page-tab"></div>
+            </div>
                 <div className="story-illustration">
                     <div className="story-title">شیر اور خزانہ</div>
                 </div>
