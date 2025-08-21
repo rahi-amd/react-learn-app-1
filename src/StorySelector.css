@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Urdu:wght@400;600;700&display=swap');
+
+.story-title {
+  font-family: 'Noto Sans Urdu', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.story-options {
+    margin-top: 25px;
+}
+
+
+.read-to-me-btn, .read-it-myself-btn {
+display: block;
+  width: 100%;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: Noto Sans Urdu, Arial, sans-serif;
+}
+
+.read-to-me-btn {
+  background-color: #26d0ce;
+  color: white;
+}
+
+.read-it-myself-btn{
+    background-color: #4ecdc4;
+    color: white;
+}
+
+.read-to-me-btn:hover, .read-it-myself-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.story-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+    background-color: #d4a574;
+  padding: 20px;
+}
+.story-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 50px 40px;
+    max-width: 450px;
+    min-height: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 8px solid transparent;
+    background-image: 
+    linear-gradient(white, white),
+    repeating-linear-gradient(
+        0deg,
+        #9b59b6 0px,
+        #9b59b6 4px,
+        #27ae60 4px,
+        #27ae60 8px,
+        #e74c3c 8px,
+        #e74c3c 12px,
+        #f39c12 12px,
+        #f39c12 16px
+    );
+    background-origin: border-box;
+    background-clip: padding-box, border-box;    
+}

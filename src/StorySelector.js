@@ -1,8 +1,22 @@
+import './StorySelector.css';
+
+
 function StorySelector(){
     return (
         <div className="story-selector">
-        <h2>Select a Story</h2>
-        <p>Story selection will go here</p>
+            <div className="story-card">
+                <div className="story-illustration">
+                    <div className="story-title">شیر اور خزانہ</div>
+                </div>
+
+        <div className="story-options">
+        <button className="read-to-me-btn">
+           🔊 مجھے پڑھ کر سنائیں</button>
+        <button className="read-it-myself-btn"> 
+              📖 مجھے خود پڑھنا ہے
+        </button>
+           </div>        
+          </div>
         </div>
     );
 }
