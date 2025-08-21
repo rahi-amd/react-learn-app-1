@@ -1,35 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
 
 .story-illustration {
-  flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+
+}
+.image-area {
+  height: 200px;              /* Space for future lion image */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;  /* Temporary background to see the space */
+  margin-bottom: 0;
 }
 
 .story-title {
   font-family: 'Gulzar', serif;  
-  font-size: 68px;
-  font-weight: 700;
+  font-size: 78px;
+  font-weight: 550;
   color: #2c3e50;
-  margin: 0;
+  margin: 0 ;
   text-align: center;
 }
 
 .story-options {
-    margin-top: 30px;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    ;
 }
-
+.story-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;    /* Keeps aspect ratio */
+  border-radius: 0px;
+}
 
 .read-to-me-btn, .read-it-myself-btn {
   display: block;
-  padding: 18px 40px;
-  border: none;
+  padding: 0;
+  border: 5px solid white;
   border-radius: 25px;
   font-size: 18px;
   font-weight: bold;
@@ -37,29 +50,34 @@
   transition: all 0.3s ease;
   font-family: 'Gulzar', serif;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  min-width: 250px;
+  position: relative;
+  overflow: hidden;
+
+  min-width: 200px;
 }
 
 .read-to-me-btn {
-  padding: 22px 50px;
-  font-size: 20px;
+  padding: 10px 40px;
+  font-size: 30px;
   min-width: 300px;
   background: linear-gradient(145deg, #26d0ce, #1ba8a6);
   color: white;
   box-shadow: 
     0 8px 15px rgba(38, 208, 206, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .read-it-myself-btn{
-    padding: 16px 35px;     /* Smaller padding */
-  font-size: 16px;        /* Smaller font */
-  min-width: 250px;       /* Less wide */
+    padding: 10px;     /* Smaller padding */
+  font-size: 20px;        /* Smaller font */
+  min-width: 200px;       /* Less wide */
   background: linear-gradient(145deg, #4ecdc4, #3ba89f);
   color: white;
   box-shadow: 
     0 6px 12px rgba(78, 205, 196, 0.3),
+    0 3px 6px rgba(0, 0, 0, 0.2), 
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
@@ -105,65 +123,46 @@ transform: translateY(-1px);
 }
 
 .story-selector {
-  display: flex;
+   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-    background-color: #d4a574;
-  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 10px;
+  position: relative;
 }
 .story-card {
-   display:flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: space-between;
-   position: relative  ;
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 50px 40px;
-    max-width: 450px;
-    min-height: 500px;
-    width: 90%;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    border: 8px solid transparent;   
-
-/* 3D Book Effect */
-  transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
-  box-shadow: 
-    /* Main shadow */
-    20px 20px 40px rgba(0, 0, 0, 0.3),
-    /* Inner shadow for depth */
-    inset -5px 0 10px rgba(0, 0, 0, 0.1),
-    /* Light reflection on top */
-    inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    /* Page depth effect */
-    -10px 0 0 -2px #f8f8f8,
-    -15px 0 0 -4px #f0f0f0,
-    -20px 0 0 -6px #e8e8e8;
-
-   background: linear-gradient(
-    to right,
-    #f8f8f8 0%,
-    white 3%,
-    white 97%,
-    #f0f0f0 100%
-  );
-   transition: all 0.3s ease;
+  background-color: white;
+  padding: 40px;
+  max-width: 450px;
+  width: 90%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  /* All border-related properties removed */
 }
-
 .page-tabs {
   position: absolute;
   left: -15px;
-  top: 50px;
+  top: 60px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 18px;
+  
 }
 .page-tab {
-  width: 40px;
-  height: 35px;
-  border-radius: 8px;
+  width: 30px;
+  height: 40px;
+  border-radius: 0;
 }
 .page-tab:nth-child(1) { background-color: #e74c3c; }
 .page-tab:nth-child(2) { background-color: #3498db; }
