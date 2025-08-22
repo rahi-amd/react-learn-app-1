@@ -148,30 +148,17 @@ transform: translateY(-1px);
   position: relative;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  /* All border-related properties removed */
 }
-.page-tabs {
+.border-overlay {
   position: absolute;
-  left: -15px;
-  top: 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  
+  top: -63px;
+  left: -20px;
+  width: calc(100% + 35px);
+  height: calc(109% + 50px);
+  pointer-events: none;
+  z-index: 10;
+  object-fit: contain
 }
-.page-tab {
-  width: 30px;
-  height: 40px;
-  border-radius: 0;
-}
-.page-tab:nth-child(1) { background-color: #e74c3c; }
-.page-tab:nth-child(2) { background-color: #3498db; }
-.page-tab:nth-child(3) { background-color: #2ecc71; }
-.page-tab:nth-child(4) { background-color: #f39c12; }
-.page-tab:nth-child(5) { background-color: #9b59b6; }
-.page-tab:nth-child(6) { background-color: #1abc9c; }
-.page-tab:nth-child(7) { background-color: #e67e22; }
-.page-tab:nth-child(8) { background-color: #34495e; }
-.page-tab:nth-child(9) { background-color: #e91e63; }
-.page-tab:nth-child(10) { background-color: #795548; }
+
+
 

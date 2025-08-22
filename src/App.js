@@ -7,7 +7,6 @@ function App() {
   const [currentView, setCurrentView] = useState('selector');
   return (
     <div className="App">
-      <h1>Testing Urdu Stories</h1>
       {currentView === 'selector' && <StorySelector/>}
       {currentView === 'reader' && <StoryReader/>}
 
