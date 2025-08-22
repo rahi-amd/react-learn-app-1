@@ -3,8 +3,7 @@ import skyBackground from './assets/images/sky-background-1.jpg';
 import lionTreasure from './assets/images/lion-treasure.png';
 import decorativeBorder from './assets/images/decorative-border.png';
 
-
-function StorySelector(){
+function StorySelector({ onSelectStory }){
     return (
         <div className="story-selector"
             style={{ backgroundImage: `url(${skyBackground})` }}>
@@ -19,9 +18,9 @@ function StorySelector(){
                 </div>
 
         <div className="story-options">
-        <button className="read-to-me-btn">
+        <button className="read-to-me-btn" onClick={onSelectStory}>
            🔊 مجھے  پڑھ  کر  سنائیں</button>
-        <button className="read-it-myself-btn"> 
+        <button className="read-it-myself-btn" onClick={onSelectStory} > 
               📖 مجھے خود  پڑھنا  ہے
         </button>
            </div>  
