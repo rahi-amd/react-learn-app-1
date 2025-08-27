@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       {currentView === 'selector' && <StorySelector onSelectStory={handleSelectStory}/>}
-      {currentView === 'reader' && <StoryReader/>}
+      {currentView === 'reader' && <StoryReader onBack={() => setCurrentView('selector')}/>}
 
     </div>
   );
