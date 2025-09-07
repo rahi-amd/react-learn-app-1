@@ -7,13 +7,14 @@
 
 }
 .image-area {
-  height: 200px;              /* Space for future lion image */
+  height: 180px;              
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;  /* Temporary background to see the space */
   margin-bottom: 0;
+  margin-top:20px;
 }
 
 .story-title {
@@ -41,7 +42,8 @@
 
 .read-to-me-btn, .read-it-myself-btn {
   display: block;
-  padding: 0;
+  padding: 10px 20px;
+  bottom: 35px;
   border: 5px solid white;
   border-radius: 25px;
   font-size: 18px;
@@ -52,7 +54,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
-
   min-width: 200px;
 }
 
@@ -136,7 +137,7 @@ transform: translateY(-1px);
 }
 .story-card {
   background-color: white;
-  padding: 40px;
+  padding: 30px;
   max-width: 450px;
   width: 90%;
   min-height: 500px;
@@ -148,15 +149,19 @@ transform: translateY(-1px);
   position: relative;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+
 }
 .border-overlay {
   position: absolute;
-  top: 6vh;
-  left: 10vw;
-  width: 86wh;
-  height: 118vh;
+  top: 50%;                    /* Center vertically */
+  left: 50%;                   /* Center horizontally */
+  transform: translate(-50%, -50%);  /* Perfect centering */
+  width: 115vw;                  /* Responsive to container */
+  height: 115vh;                 /* Responsive to container */
+  max-width: 900px;           /* Doesn't get too big */
+  max-height: 850px;          /* Doesn't get too big */
   pointer-events: none;
-  z-index: 10;
+  z-index: 1;                 /* Behind content */
   object-fit: contain;
 }
 .home-button {
