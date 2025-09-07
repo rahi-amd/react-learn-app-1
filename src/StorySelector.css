@@ -151,13 +151,13 @@ transform: translateY(-1px);
 }
 .border-overlay {
   position: absolute;
-  top: -6vh;
-  left: 8vw;
-  width: 83vw;
-  height: 115vh;
+  top: 6vh;
+  left: 10vw;
+  width: 86wh;
+  height: 118vh;
   pointer-events: none;
   z-index: 10;
-  object-fit: cover;
+  object-fit: contain;
 }
 .home-button {
   width: 50px;

@@ -1,13 +1,10 @@
 .story-content {
   position: absolute;
-  top: 65vh;
-  left: 65vw;
-  transform: translate(-50%, -50%);
-  width: 30vw;
+  top: 400px;
+  left: 600px;
+  width: 1400px;
   display:flex;
   height: 120px;
-  min-width: 500px; /* Minimum width for small screens */
-  max-width: 800px;
   background: transparent;
   padding: 20px;
   align-items: center;
@@ -15,25 +12,34 @@
 }
 
 .story-content p {
-  white-space: pre-line;
+  white-space: pre;
   font-family: 'Gulzar', serif;
-  font-size: 32px; /* Reduced from 40px */
-  line-height: 1.6;
+  font-size: 36px; /* Reduced from 40px */
+  line-height: 1.7;
   text-align: center;
   margin: 0;
   color: #333;
-  word-wrap: break-word;
+  word-wrap: normal;
+  overflow: visible;
 }
 .story-content.page-1 {
-  top: 24vh;
-  left: 70vw;
+  top: 20vh;
+  left: 30vw;
   width: 29vw;
   height: 200px;
 }
 
 .story-content.page-2 {
-  top: 35vh;
+  top: 20vh;
+  left: 35vw;
+  width: 29vw;
+  height: 200px
+}
+.story-content.page-3 {
+  top: 8vh;
   left: 60vw;
+  width: 29vw;
+  height: 200px
 }
 
 .home-button {
@@ -63,19 +69,4 @@
 .story-reader {
   height: 100vh;
   overflow: hidden;
-}
-@media (max-width: 1200px) {
-  .story-content {
-    left:80%;
-    top: 65%;
-    width: 800px;
-  }
-}
-
-@media (max-width: 800px) {
-  .story-content {
-    left:80%;
-    top: 65%;
-    width: 800px;
-  }
 }

@@ -1,12 +1,12 @@
 import { storyData } from './storyData';
 import { useState } from 'react'; 
-import homeButton from './assets/images/home-button.png';
-import storyBackground from './assets/images/page-1.png';
 import './StoryReader.css';
+import homeButton from './assets/images/home-button.png';
 import previousButton from './assets/images/previous-button.png';
 import nextButton from './assets/images/next-button.png';
+import storyBackground from './assets/images/page-1.png';
 import page2Background from './assets/images/page-2.png';
-
+import page3Background from './assets/images/page-3.png';
 
 
 
@@ -31,7 +31,14 @@ function StoryReader({ onBack }) {
        backgroundRepeat: 'no-repeat',
        height: '100vh',
        width: '100%'
-     } :{}}>
+     } :currentPage === 2 ? {
+       backgroundImage: `url(${page3Background})`,
+       backgroundSize: 'cover',
+       backgroundPosition: 'center',
+       backgroundRepeat: 'no-repeat',
+       height: '100vh',
+       width: '100%'
+     } : {}}>
 
    <img src={homeButton} alt="Home" className="home-button" onClick={onBack} />
 
